@@ -1,0 +1,143 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  border: 1px solid brown;
+  background-color: white;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+
+nav>div {
+  display: flex;
+  flex-direction: row;
+}
+
+nav>div>a {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: red;
+  border: 1px solid blue;
+  padding: 0 10px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#left {
+  justify-content: space-between;
+  width: 50%;
+}
+
+#right {
+  justify-self: flex-end;
+}
+
+#right>div {
+  border-left: none;
+}
+
+#right>div:first-child {
+  border-left: 1px solid blue;
+}
+
+.scroll {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll>div {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.scroll:nth-of-type(1) {
+  background-image: url("images/img1.jpg");
+}
+
+.scroll:nth-of-type(2) {
+  background-image: url("images/img2.jpg");
+}
+
+.scroll:nth-of-type(3) {
+  background-image: url("images/img3.jpg");
+}
+
+.scroll:nth-of-type(4) {
+  background-image: url("images/img4.jpg");
+}
+
+.scroll:target>div {
+  font-size: 100px;
+  color: rgb(82, 29, 29);
+}
+
+#first:target~nav>div>a {
+  background-color: rgb(53, 85, 182);
+}
+
+#second:target~nav a {
+  background-color: rgb(23, 170, 55);
+}
+
+#second:target~nav>div>a {
+  background-color: rgb(235, 220, 20);
+}
+
+#third:target~nav>div>a {
+  background-color: rgb(197, 111, 31);
+}
+
+#fourth:target~nav>div>a {
+  background-color: rgb(182, 36, 175);
+}
+
+@media (max-width: 600px) {
+  .scroll>div {
+    font-size: 60px;
+  }
+
+  .scroll:target>div {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    justify-content: start;
+  }
+
+  nav>div {
+    flex-direction: column;
+  }
+
+  #left {
+    width: 100%;
+  }
+
+  nav>div>a {
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+  }
+}

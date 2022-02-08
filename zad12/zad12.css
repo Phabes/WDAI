@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-width: 350px;
+  min-height: 550px;
+  background-color: rgb(219, 216, 216);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe {
+  width: 80%;
+  display: flex;
+  height: 80%;
+}
+
+.shoe>div {
+  width: 50%;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.shoeIMG {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.shoeColor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 75%;
+  padding-top: 75%;
+  background-color: rgb(236, 43, 188);
+}
+
+.shoeIMG>.boot {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(-15deg);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  width: 100%;
+  height: 15%;
+  min-height: 28px;
+  position: absolute;
+  box-sizing: border-box;
+  right: 0;
+  top: 0;
+}
+
+.icons>img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.right {
+  height: 100%;
+  min-height: 550px;
+  align-self: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightContent {
+  width: 80%;
+  height: 80%;
+}
+
+.rightContent>div {
+  margin: 20px 0;
+}
+
+.rightContent>div:first-child {
+  margin-top: 0;
+}
+
+.rightContent>div:last-child {
+  margin-bottom: 0;
+}
+
+.productName {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.newTag {
+  color: white;
+  background-color: rgb(236, 43, 188);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.category {
+  border-bottom: 1px solid rgb(167, 158, 158);
+}
+
+p {
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(102, 101, 99);
+}
+
+.colors {
+  display: flex;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked~div {
+  display: flex;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  border-radius: 40px;
+  margin-left: 8px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.color:first-child {
+  margin-left: 0;
+}
+
+.color>div {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#blue:target .blue>div, #red:target .red>div, #green:target .green>div, #orange:target .orange>div, #black:target .black>div {
+  width: 60%;
+  height: 60%;
+}
+
+#blue:target .shoeColor, .blue>div, #blue:target .newTag {
+  background-color: rgb(6, 161, 146);
+}
+
+#red:target .shoeColor, .red>div, #red:target .newTag {
+  background-color: rgb(241, 48, 42);
+}
+
+#green:target .shoeColor, .green>div, #green:target .newTag {
+  background-color: rgb(69, 235, 28);
+}
+
+#orange:target .shoeColor, .orange>div, #orange:target .newTag {
+  background-color: rgb(209, 141, 15);
+}
+
+#black:target .shoeColor, .black>div, #black:target .newTag {
+  background-color: rgb(69, 73, 73);
+}
+
+a {
+  width: 100%;
+  height: 100%;
+  visibility: 0;
+  position: absolute;
+  display: flex;
+  border-radius: 30px;
+}
+
+.sizes {
+  display: flex;
+}
+
+.size {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(180, 180, 187);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.size>div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(6, 161, 146);
+}
+
+.size:first-child {
+  margin-left: 0;
+}
+
+.size:hover {
+  background-color: rgb(71, 226, 211);
+}
+
+.costs {
+  display: flex;
+  align-items: center;
+}
+
+.addProduct {
+  width: 140px;
+  min-width: 140px;
+  height: 30px;
+  background-color: rgb(13, 110, 122);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.addProduct>img {
+  display: block;
+  height: 50%;
+  width: auto;
+  margin-right: 10px;
+}
+
+.price {
+  font-size: 25px;
+  margin-left: 40px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    height: auto;
+  }
+
+  .color {
+    width: 30px;
+    height: 30px;
+  }
+
+  .shoe {
+    flex-direction: column;
+  }
+
+  .left {
+    min-height: auto;
+  }
+
+  .right {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .rightContent {
+    width: 100%;
+    height: 100%;
+    margin: 20px
+  }
+
+  .shoe>div {
+    width: 100%;
+  }
+
+  .shoeIMG {
+    width: 60%;
+    height: 100%;
+    margin-right: 15%;
+  }
+
+  .shoeIMG>.boot {
+    margin-top: 5%;
+  }
+
+  .shoeColor {
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .costs {
+    justify-content: space-between;
+  }
+
+  .price {
+    margin-left: 0;
+  }
+}

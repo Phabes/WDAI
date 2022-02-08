@@ -1,233 +1,85 @@
-#first {
-    background-color: red;
-    color: rgb(30, 218, 13);
-    font-size: 20px;
-    margin: 80px;
-}
-
-#second {
-    width: 200px;
-    height: 100px;
-    background-color: #345134;
-    color: royalblue;
-    font-size: 14px;
-    overflow: hidden;
-    padding: 0px 20px;
-}
-
-#third {
-    width: 700px;
-    height: 200px;
-    background-image: url("kot.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    color: rgb(80, 20, 10);
-    font-size: 34px;
-    font-style: oblique;
-    overflow-y: scroll;
-}
-
-#fourth {
-    background-color: rgb(23, 62, 200);
-    border: 4px dotted red;
-}
-
-table>tbody>tr>td {
-    width: 80px;
-    height: 20px;
-}
-
-table>tbody>tr:nth-child(2n) {
-    background-color: rgb(83, 135, 165);
-}
-
-table>tbody>tr:nth-child(2n+1) {
-    background-color: rgb(132, 183, 187);
-}
-
-#table1>tbody>tr:first-child>td {
-    background-color: rgb(46, 57, 211);
-}
-
-#table2 {
-    border-collapse: collapse;
-}
-
-#table2 td {
-    background-color: rgb(189, 184, 184);
-    border: 1px solid black;
-    box-sizing: border-box;
-}
-
-#table2>tbody>tr:first-child>td {
-    background-color: rgb(107, 104, 104);
+body {
+  margin: 0;
 }
 
 #container {
-    width: 400px;
-    height: 300px;
-    text-align: justify;
-    overflow: hidden;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh
 }
 
-#halloween {
+header {
+  height: 100px;
+  background-color: grey;
+}
+
+#logo {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  width: 25%;
+  height: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+nav, footer {
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+#content>section {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#content>section:first-child {
+  width: 25%;
+}
+
+#content>section:nth-child(2) {
+  width: 60%;
+}
+
+#content>section:last-child {
+  width: 15%;
+}
+
+footer {
+  background-color: gray;
+}
+
+@media (max-width: 800px) {
+  #content>section:nth-child(2) {
+    width: 75%;
+  }
+  #content>section:last-child {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+  }
 }
 
-#halloween>figure {
-    width: 110px;
-    margin: 0;
-    padding: 5px;
-}
-
-#halloween>figure>img {
+@media (max-width: 600px) {
+  #content>section:first-child {
     width: 100%;
-}
-
-#halloween>figure:first-child {
-    float: left;
-}
-
-#halloween>figure:last-child {
-    float: right;
-}
-
-#halloween>figure>figcaption {
-    text-align: center;
-    color: rgb(156, 135, 16);
-}
-
-#positioning {
-    width: 300px;
-    height: 200px;
-}
-
-#positioning>figure {
-    height: 100%;
-    margin: 0;
-    float: left;
-}
-
-#positioning>figure>img {
-    width: 100px;
-}
-
-#positioning>figure>figcaption {
-    height: 20%;
-    text-align: center;
-}
-
-#positioning>figure:nth-child(3n+2) {
-    position: relative;
-    right: 0px;
-}
-
-#lists {
-    width: 400px;
-    height: 200px;
-    position: relative;
-}
-
-#lists>ul:first-child {
-    background-color: blue;
-    position: absolute;
-    right: 0;
-}
-
-#lists>ul:last-child {
-    background-color: red;
-    position: absolute;
-    left: 0;
-}
-
-#lists>ul {
-    width: 150px;
-    float: left;
-}
-
-#registrationFrom {
-    width: 500px;
-}
-
-#registrationFrom>div {
+  }
+  #content>section:nth-child(2) {
     width: 100%;
-}
-
-#registrationFrom>#formHead {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    color: white;
-    background-color: rgb(221, 138, 14);
-    text-indent: 10px;
-}
-
-#registrationFrom>#formBody {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(3, 3, 39);
-    color: rgb(238, 217, 27);
-}
-
-#registrationFrom>#formBody>.formLabel {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-}
-
-#registrationFrom>#formBody>.formLabel>.formLeft {
-    display: flex;
-    justify-content: end;
-    width: 40%;
-    padding-right: 20px;
-    box-sizing: border-box;
-}
-
-#registrationFrom>#formBody>.formLabel>.formRight {
-    width: 60%;
-}
-
-#registrationFrom>#formFooter {
-    display: flex;
-    justify-content: end;
-    height: 50px;
-    color: white;
-    background-color: rgb(221, 138, 14);
-}
-
-#registrationFrom>#formFooter>#buttons {
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    margin-right: 10px;
-}
-
-#registrationFrom>#formFooter>#buttons>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    height: 50%;
-}
-
-#registrationFrom>#formFooter>#buttons>div:hover {
-    cursor: pointer;
-}
-
-#registrationFrom>#formFooter>#buttons>#submit {
-    background-color: rgb(138, 238, 38);
-}
-
-#registrationFrom>#formFooter>#buttons>#cancel {
-    background-color: rgb(184, 17, 17);
+  }
+  #logo {
+    display: none;
+  }
 }

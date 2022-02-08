@@ -1,0 +1,17 @@
+<div class="foreground">
+  <form [formGroup]="modelForm" (ngSubmit)="addCommentClick()">
+    <label>
+      Tytuł:
+      <input type="text" formControlName="title" placeholder="Title" />
+    </label>
+    <label>
+      Komentarz:
+      <input type="text" formControlName="review" placeholder="Review" />
+    </label>
+    <label>
+      Data:
+      <input type="date" formControlName="date" />
+    </label>
+    <button type="submit">DODAJ</button>
+  </form>
+</div>

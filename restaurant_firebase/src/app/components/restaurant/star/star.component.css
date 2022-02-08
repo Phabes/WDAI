@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 5px;
+}
+
+img {
+  /* width: 80%;
+  height: auto;
+  display: block; */
+  width: auto;
+  height: 80%;
+  display: block;
+  cursor: pointer;
+}

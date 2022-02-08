@@ -1,0 +1,21 @@
+<!-- <div id="photos">
+  <div class="singlePhoto" *ngFor="let photo of photos">
+    <div>{{ photo.title }}</div>
+    <button (click)="showPhoto(photo)">Show Photo</button>
+  </div>
+</div>
+<div id="currentPhoto" *ngIf="emptyPhotos() != 0">
+  <img
+    src="{{ currentPhoto.url }}"
+    alt="photo"
+    *ngIf="currentPhoto != null; else noPhoto"
+  />
+</div>
+
+<ng-template #noPhoto> You didn't choose photo </ng-template> -->
+<div id="photos">
+  <div class="singlePhoto" *ngFor="let photo of photos">
+    <a routerLink="/Zdjecie/{{ photo.id }}"><button>Show Photo</button></a>
+    <div>{{ photo.title }}</div>
+  </div>
+</div>

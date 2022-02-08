@@ -1,0 +1,68 @@
+<!-- <nav>
+  <div class="navButtons">
+    <a routerLink="" routerLinkActive="active">HOME</a>
+    <a routerLink="dishes" routerLinkActive="active">MENU</a>
+    <a routerLink="addDish" routerLinkActive="active">DODAJ</a>
+    <a routerLink="basket" routerLinkActive="active">KOSZYK</a>
+    <a routerLink="empty" routerLinkActive="active">PUSTE</a>
+  </div>
+  <div class="userButtons">
+    <app-basket></app-basket>
+  </div>
+</nav> -->
+
+<nav>
+  <div id="logo">LOGO</div>
+  <div id="menu">
+    <input type="checkbox" name="navi" id="navi" />
+    <label for="navi">
+      <div id="box">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </div>
+    </label>
+    <ul>
+      <li>
+        <a (click)="changeNavStatus()" routerLink="" routerLinkActive="active"
+          >HOME</a
+        >
+      </li>
+      <li>
+        <a
+          (click)="changeNavStatus()"
+          routerLink="dishes"
+          routerLinkActive="active"
+          >MENU</a
+        >
+      </li>
+      <li>
+        <a
+          (click)="changeNavStatus()"
+          routerLink="addDish"
+          routerLinkActive="active"
+          >DODAJ</a
+        >
+      </li>
+      <li>
+        <a
+          (click)="changeNavStatus()"
+          routerLink="basket"
+          routerLinkActive="active"
+          >KOSZYK</a
+        >
+      </li>
+      <li>
+        <a
+          (click)="changeNavStatus()"
+          routerLink="empty"
+          routerLinkActive="active"
+          >PUSTE</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="userButtons">
+    <app-basket></app-basket>
+  </div>
+</nav>

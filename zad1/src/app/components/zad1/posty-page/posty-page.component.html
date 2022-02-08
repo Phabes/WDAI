@@ -1,0 +1,7 @@
+<div id="posts">
+  <app-new-post-form (postAdded)="addPost($event)"></app-new-post-form>
+  <div class="singlePost" *ngFor="let post of posts">
+    <div class="postTitle">{{ post.title }}</div>
+    <div class="postBody">{{ post.body }}</div>
+  </div>
+</div>

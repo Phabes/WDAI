@@ -1,0 +1,40 @@
+<div class="container">
+  <form [formGroup]="modelForm" (ngSubmit)="registerUser()">
+    <label>
+      Nick:
+      <input type="text" formControlName="nick" placeholder="Nick" />
+    </label>
+    <label>
+      Email:
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="E-mail"
+        (input)="clearErrors()"
+      />
+    </label>
+    <label>
+      Hasło:
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Hasło"
+        (input)="clearErrors()"
+      />
+    </label>
+    <label>
+      Powtórz Hasło:
+      <input
+        type="password"
+        formControlName="password_confirm"
+        placeholder="Powtórzone hasło"
+        (input)="clearErrors()"
+      />
+    </label>
+    <label id="errors">
+      <div class="error">{{ emailError }}</div>
+      <div class="error">{{ passwordError }}</div>
+    </label>
+    <button type="submit">ZAREJESTRUJ</button>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+#dishesEditor {
+  min-height: calc(100vh - 170px);
+}
+
+#editDishes {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#dishList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dishInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dishName {
+  width: 80%;
+}
+
+.dishButtons {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#editFormContainer {
+  width: 60%;
+}
+
+@media (max-width: 1200px) {
+  #editDishes {
+    flex-direction: column;
+  }
+
+  #editFormContainer {
+    width: 100%;
+  }
+}

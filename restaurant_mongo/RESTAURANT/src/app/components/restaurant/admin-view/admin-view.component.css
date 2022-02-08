@@ -1,0 +1,37 @@
+.settigns {
+  min-height: calc(100vh - 170px);
+}
+
+.title {
+  font-size: 30px;
+}
+
+#users,
+#tableTitles {
+  display: flex;
+}
+
+.userRow {
+  display: flex;
+  margin-top: 10px;
+}
+
+.firstColumn,
+.secondColumn,
+.thirdColumn {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.thirdColumn {
+  width: 300px;
+}
+
+input {
+  margin: 0;
+}
+
+.thirdColumn > div {
+  margin-right: 5px;
+}

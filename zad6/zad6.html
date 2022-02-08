@@ -2,31 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test FlexBox Effect</title>
-    <link rel="stylesheet" href="zad6.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="zad6.css">
+  <script src="zad6.js" defer></script>
 </head>
 
 <body>
-    <section>
-        <div>
-            <img src="images/image-1.jpg" alt="">
+  <div id="container">
+    <div id="list">
+      <div class="user">
+        <div class="userInfo">
+          <div class="userName">Woj</div>
+          <div>213712369</div>
         </div>
-        <div>
-            <img src="images/image-2.jpg" alt="">
+        <div class="deleteButton">
+          <button onclick="deleteInfo(this.parentNode.parentNode)"><img src="images/trash.png" alt="trash"></button>
         </div>
-        <div>
-            <img src="images/image-3.jpg" alt="">
+      </div>
+      <div class="user">
+        <div class="userInfo">
+          <div class="userName">Gre</div>
+          <div>123456789</div>
         </div>
-        <div>
-            <img src="images/image-4.jpg" alt="">
+        <div class="deleteButton">
+          <button onclick="deleteInfo(this.parentNode.parentNode)"><img src="images/trash.png" alt="trash"></button>
         </div>
-        <div>
-            <img src="images/image-4.jpg" alt="">
-        </div>
-    </section>
+      </div>
+    </div>
+    <div id="form">
+      <div class="formLabel">
+        <div class="title">Imię</div>
+        <input type="text" name="userName" id="userName" placeholder="Wojciech">
+      </div>
+      <div class="formLabel">
+        <div class="title">Telefon</div>
+        <input type="tel" name="phone" id="phone" placeholder="825738052">
+      </div>
+      <div class="formLabel formLabelBt">
+        <div class="title"></div>
+        <!-- <input type="submit" value="Dodaj" id="add" onclick="add()"> -->
+        <button id="add">Dodaj</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

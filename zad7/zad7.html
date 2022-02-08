@@ -7,30 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="zad7.css">
+  <script src="zad7.js" defer></script>
 </head>
 
 <body>
   <div id="container">
-    <nav>
-      <div id="logo">LOGO</div>
-      <div id="menu">
-        <input type="checkbox" name="navi" id="navi" role="button">
-        <label for="navi">
-          <div id="box">
-            <span class="bar top"></span>
-            <span class="bar middle"></span>
-            <span class="bar bottom"></span>
-          </div>
-        </label>
-        <ul>
-          <li>O MNIE</li>
-          <li>PRODUKTY</li>
-          <li>KONTAKT</li>
-          <li>HOBBY</li>
-        </ul>
-      </div>
-    </nav>
-    <div id="content"></div>
+    <div id="tasks">
+      <button onclick="taskA()">A</button>
+      <button onclick="taskB()">B</button>
+      <button onclick="taskC()">C</button>
+      <button onclick="taskD()">D</button>
+      <button onclick="taskE()">E</button>
+      <button onclick="taskF()">F</button>
+    </div>
+    <div id="show"></div>
   </div>
 </body>
 

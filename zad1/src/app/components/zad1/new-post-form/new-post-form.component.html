@@ -1,0 +1,9 @@
+<form [formGroup]="modelForm" (ngSubmit)="addPost()">
+  <label
+    >Title: <input type="text" formControlName="title" placeholder="title"
+  /></label>
+  <label
+    >Body: <input type="text" formControlName="body" placeholder="body"
+  /></label>
+  <button type="submit">DODAJ</button>
+</form>

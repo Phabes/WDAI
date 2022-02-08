@@ -1,0 +1,10 @@
+#posts{
+  margin: 0 10px;
+}
+.singlePost {
+  padding-top: 20px;
+}
+
+.postTitle {
+  font-size: 30px;
+}

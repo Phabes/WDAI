@@ -1,0 +1,24 @@
+<div id="basketDishes">
+  <div *ngIf="basket.length != 0; else emptyBasket">
+    <div class="singleDish" *ngFor="let basketDish of basket">
+      <div class="dishName">{{ basketDish.dish.name }}</div>
+      <div class="cartButtons">
+        <div class="dishQuantity">x {{ basketDish.quantity }}</div>
+        <div
+          class="cartButton addCartButton"
+          (click)="addButtonClick(basketDish)"
+        >
+          +
+        </div>
+        <div
+          class="cartButton removeCartButton"
+          (click)="removeButtonClick(basketDish)"
+        >
+          -
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyBasket>Nie masz nic w koszyku</ng-template>

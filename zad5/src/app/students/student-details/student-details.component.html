@@ -1,0 +1,17 @@
+<div *ngIf="student" id="student">
+  <div><label>Imie: </label> {{ student.name }}</div>
+  <div><label>Wiek: </label> {{ student.age }}</div>
+
+  <span class="button is-small btn-danger" (click)="deleteStudent()"
+    >Delete</span
+  >
+  <a
+    routerLink="/student/{{ student.key }}"
+    routerLinkActive="router-link-active"
+    ><span class="button is-small btn-danger" (click)="editStudent()"
+      >Edit</span
+    ></a
+  >
+
+  <hr />
+</div>

@@ -1,0 +1,9 @@
+<div id="center">
+  <img
+    src="{{ photo.url }}"
+    alt="{{ photo.title }}"
+    *ngIf="photo != null; else loading"
+  />
+</div>
+
+<ng-template #loading> Loading Photo</ng-template>

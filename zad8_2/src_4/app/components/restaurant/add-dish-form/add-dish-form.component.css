@@ -1,0 +1,12 @@
+form{
+  display: flex;
+  flex-direction: column;
+  width:400px;
+}
+
+label{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}

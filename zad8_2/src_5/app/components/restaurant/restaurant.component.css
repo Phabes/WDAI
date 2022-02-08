@@ -1,0 +1,12 @@
+#content {
+  width: 100%;
+  display: flex;
+}
+
+/* #content:first-child {
+  width: 30%;
+}
+
+#content:nth-child(2) {
+  width: 70%;
+} */

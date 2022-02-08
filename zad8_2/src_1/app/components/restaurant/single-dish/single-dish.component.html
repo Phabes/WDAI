@@ -1,0 +1,31 @@
+<div
+  class="singleDish"
+  [ngStyle]="{
+    border: '6px solid ' + dish.color
+  }"
+>
+  <div>{{ dish.name | uppercase }}</div>
+  <div>{{ dish.priceUSD * rate | number: "1.2-2" }} {{ dish.priceSymbol }}</div>
+  <!-- <div><img src="{{ dish.url }}" alt="" /></div> -->
+  <div *ngIf="dish.available != 0; else notAvailable">
+    <div class="dishButtons">
+      <div
+        class="addToCart"
+        (click)="addButtonClick()"
+        [ngClass]="{ hideAdd: dish.hide }"
+      >
+        +
+      </div>
+      <div
+        [ngStyle]="{
+          color: dish.available - dish.inBasket > 3 ? 'black' : 'red'
+        }"
+      >
+        Only {{ dish.available - dish.inBasket }} left
+      </div>
+      <div class="removeFromCart" (click)="removeButtonClick()">-</div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notAvailable> Nie ma tego dania w magazynie </ng-template>

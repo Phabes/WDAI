@@ -1,0 +1,34 @@
+<!-- <app-nav-bar [basket]="basket" [total]="total"></app-nav-bar> -->
+<app-nav-bar
+  [basket]="dishes"
+  [total]="total"
+  [rate]="rate"
+  [currency]="currency"
+></app-nav-bar>
+<div style="display: flex">
+  <app-dishes
+    [dishes]="dishes"
+    [rate]="rate"
+    (addToBasketClick)="addToBasket($event)"
+    (removeFromBasketClick)="removeFromBasket($event)"
+    (removeDishClick)="removeDish($event)"
+  ></app-dishes>
+  <div id="right">
+    <img
+      *ngIf="selectedDish != undefined"
+      src="{{ selectedDish.url }}"
+      alt="dishImg"
+    />
+  </div>
+</div>
+<select name="currency" id="currency" (change)="changeCurrency($event)">
+  <option value="USD">$</option>
+  <option value="EURO">€</option>
+</select>
+<!-- <app-filter-dishes
+  [dishes]="dishes"
+  [len]="dishes.length"
+  (filterDishes)="setDishes($event)"
+></app-filter-dishes> -->
+<app-filter-dishes (filterDishes)="setDishes($event)"></app-filter-dishes>
+<app-add-dish-form (addNewDish)="addDish($event)"></app-add-dish-form>

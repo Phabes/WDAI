@@ -1,0 +1,19 @@
+<div id="container">
+  <div>
+    <app-car
+      [brands]="brands"
+      [models]="models"
+      [colors]="colors"
+      (brandChanged)="changeBrand($event)"
+      (modelChanged)="changeModel($event)"
+      (colorChanged)="changeColor($event)"
+    ></app-car>
+  </div>
+  <div id="carInfo">
+    <div *ngIf="allDataReceived; then customizedCar; else nothing"></div>
+    <ng-template #customizedCar>
+      {{ brands[currBrand] }} {{ models[currModel] }} {{ getColor() }}
+    </ng-template>
+    <ng-template #nothing>Choose your preferences</ng-template>
+  </div>
+</div>

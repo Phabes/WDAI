@@ -1,0 +1,16 @@
+<div id="basket">
+  <div class="navIcon">
+    <img src="assets/cartIcon.png" alt="basket" />
+    <div
+      class="totalInBasket"
+      [ngClass]="{
+        hideTotalInBasket: total == 0,
+        changeTotalInBusketColor: total > 10
+      }"
+    >
+      {{ total }}
+    </div>
+  </div>
+  <div class="navIconDesc">BASKET</div>
+  <div>{{ sum }}</div>
+</div>

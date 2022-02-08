@@ -1,0 +1,6 @@
+<div id="score">{{ numberOfClicks }}</div>
+<app-child
+  [clickWorks]="clickWorks"
+  (addNumber)="add()"
+  (resetAdd)="reset()"
+></app-child>

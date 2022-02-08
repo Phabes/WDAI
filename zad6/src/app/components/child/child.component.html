@@ -1,0 +1,11 @@
+<div *ngIf="clickWorks; else noAdd">
+  <button (click)="addButtonClick()">CLICK</button>
+  <button>RESET</button>
+</div>
+
+<ng-template #noAdd>
+  <div>
+    <button>CLICK</button>
+    <button (click)="resetButtonClick()">RESET</button>
+  </div>
+</ng-template>

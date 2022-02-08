@@ -1,0 +1,11 @@
+<div id="dishes">
+  <div *ngFor="let dish of dishes; index as i">
+    <app-single-dish
+      [dish]="dish"
+      [rate]="rate"
+      (addToBasketClick)="addToBasket(i)"
+      (removeFromBasketClick)="removeFromBasket(i)"
+      (removeDishClick)="removeDish(i)"
+    ></app-single-dish>
+  </div>
+</div>

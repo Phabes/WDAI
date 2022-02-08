@@ -1,0 +1,157 @@
+.dish {
+  min-width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(164, 164, 165);
+  /* min-height: 500px; */
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dishImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dishImg img {
+  height: 300px;
+  width: auto;
+  display: block;
+}
+
+.dishName {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.dishPrice {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.dishType {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.dishCategory {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.dishProducts {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.dishDescription {
+  max-height: 200px;
+}
+
+.dishButtons {
+  display: flex;
+  position: relative;
+  height: 30px;
+  margin: 10px 0;
+}
+
+.cartButtons {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.cartButton {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.addCartButton {
+  background-color: rgb(199, 55, 30);
+}
+
+.addCartButton:hover {
+  background-color: rgb(160, 30, 7);
+}
+
+.removeCartButton {
+  background-color: rgb(107, 142, 238);
+}
+
+.removeCartButton:hover {
+  background-color: rgb(34, 69, 167);
+}
+
+.leftInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteDish {
+  cursor: pointer;
+  background-color: rgb(82, 78, 78);
+  width: 120px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  color: white;
+}
+
+.deleteDish:hover {
+  background-color: rgb(48, 46, 46);
+}
+
+.hideAdd {
+  display: none;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 70%;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.leftInfo {
+  display: flex;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  height: 30px;
+}
+
+.noInStock {
+  margin: 10px 0;
+}
+
+.fewLeft {
+  font-weight: bold;
+}
+
+.allOrdered {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}

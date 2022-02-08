@@ -1,0 +1,16 @@
+.hideAdd {
+  display: none;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 10px;
+}
+
+.leftInfo{
+  display: flex;
+}

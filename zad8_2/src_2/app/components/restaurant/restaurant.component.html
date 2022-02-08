@@ -1,0 +1,8 @@
+<!-- <app-nav-bar [basket]="basket" [total]="total"></app-nav-bar> -->
+<app-nav-bar [basket]="dishes" [total]="total"></app-nav-bar>
+<!-- <app-nav-bar [basket]="dishes"></app-nav-bar> -->
+<app-dishes
+  [dishes]="dishes"
+  (addDishClick)="addDish($event)"
+  (removeDishClick)="removeDish($event)"
+></app-dishes>

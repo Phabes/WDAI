@@ -1,0 +1,47 @@
+<div
+  class="singleDish"
+  [ngStyle]="{
+    border: dish.color
+  }"
+>
+  <div>{{ dish.name | uppercase }}</div>
+  <div>{{ dish.priceUSD * rate | number: "1.2-2" }} {{ dish.priceSymbol }}</div>
+  <div>{{ dish.kitchenType }}</div>
+  <div>{{ dish.category }}</div>
+  <div>{{ dish.description }}</div>
+  <!-- <div><img src="{{ dish.url }}" alt="" /></div> -->
+  <div *ngIf="dish.available != 0; else notAvailable">
+    <div class="dishButtons">
+      <div
+        class="addToCart"
+        (click)="addButtonClick()"
+        [ngClass]="{ hideAdd: dish.hide }"
+      >
+        +
+      </div>
+      <div
+        *ngIf="dish.available - dish.inBasket < 10"
+        [ngStyle]="{
+          color: dish.available - dish.inBasket > 3 ? 'black' : 'red'
+        }"
+      >
+        <div class="leftInfo">
+          <div *ngIf="dish.available - dish.inBasket > 0; else noMoreAvailable">
+            Only {{ dish.available - dish.inBasket }} left
+          </div>
+        </div>
+      </div>
+      <div class="removeFromCart" (click)="removeButtonClick()">-</div>
+    </div>
+  </div>
+  <div class="deleteDish" (click)="removeDishButtonClick()">USUŃ</div>
+  <div class="stars">
+    <div *ngFor="let starImage of stars; index as i">
+      <app-star [starImage]="starImage" (setDishStars)="setStars(i)"></app-star>
+    </div>
+  </div>
+</div>
+<img src="assets/star.png" alt="star" style="display: none" />
+
+<ng-template #notAvailable> Nie ma tego dania w magazynie </ng-template>
+<ng-template #noMoreAvailable> Zamówiłeś już całą dostępną ilość </ng-template>

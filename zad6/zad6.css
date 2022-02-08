@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  border: 1px solid brown;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+nav>div {
+  display: flex;
+  flex-direction: row;
+}
+
+nav>div>div {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: red;
+  border: 1px solid blue;
+}
+
+#left {
+  justify-content: space-between;
+  width: 50%;
+}
+
+#right>div {
+  border-left: none;
+}
+
+#right>div:first-child {
+  border-left: 1px solid blue;
+}

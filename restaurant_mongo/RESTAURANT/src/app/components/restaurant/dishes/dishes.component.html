@@ -1,0 +1,31 @@
+<div id="dishes">
+  <div
+    *ngFor="
+      let dish of dishes
+        | paginate: { itemsPerPage: itemsPerPage, currentPage: page };
+      index as i
+    "
+  >
+    <app-single-dish
+      [dish]="dish"
+      [dishInfo]="basketInfo[itemsPerPage * (page - 1) + i]"
+    ></app-single-dish>
+  </div>
+</div>
+<div id="controls">
+  <select
+    name="dishesPerPage"
+    id="dishesPerPage"
+    (change)="changeDishesPerPage($event)"
+  >
+    <option *ngFor="let i of maximumItemsPerPage" [ngValue]="i">
+      {{ i }}
+    </option>
+  </select>
+  <pagination-controls (pageChange)="changePage($event)"></pagination-controls>
+</div>
+<!-- <div id="dishes">
+  <div *ngFor="let dish of dishes; index as i">
+    <app-single-dish [dish]="dish" [dishInfo]="basketInfo[i]"></app-single-dish>
+  </div>
+</div> -->

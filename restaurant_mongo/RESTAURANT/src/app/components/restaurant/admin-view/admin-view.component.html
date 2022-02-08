@@ -1,0 +1,109 @@
+<div class="settigns">
+  <div class="title">PERSISTENCE:</div>
+  <div>
+    LOCAL:
+    <input
+      type="radio"
+      name="persistence"
+      id="local"
+      [checked]="persistenceName == 'local'"
+      (input)="changePersistence('local')"
+    />
+  </div>
+  <!-- <div>
+    SESSION:
+    <input
+      type="radio"
+      name="persistence"
+      id="session"
+      [checked]="persistenceName == 'session'"
+      (input)="changePersistence('session')"
+    />
+  </div> -->
+  <div>
+    NONE:
+    <input
+      type="radio"
+      name="persistence"
+      id="none"
+      [checked]="persistenceName == 'none'"
+      (input)="changePersistence('none')"
+    />
+  </div>
+  <div class="title">USERS:</div>
+  <div id="tableTitles">
+    <div class="firstColumn">Email</div>
+    <div class="secondColumn">Active Account</div>
+    <div class="thirdColumn">Role</div>
+  </div>
+  <div id="users" *ngFor="let user of users; index as i">
+    <div class="userRow" *ngIf="user.email != userEmail">
+      <div class="firstColumn">{{ user.email }}</div>
+      <div class="secondColumn">
+        <input
+          type="checkbox"
+          name="user{{ i }}"
+          id="user{{ i }}"
+          [checked]="user.activeAccount"
+          (change)="changeBanUser(user)"
+        />
+      </div>
+      <div class="thirdColumn">
+        <div>
+          CLIENT:
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="client{{ i }}"
+            (input)="changeRole('client', user)"
+            *ngIf="user.role != 'client'"
+          />
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="client{{ i }}"
+            (input)="changeRole('client', user)"
+            checked="true"
+            *ngIf="user.role == 'client'"
+          />
+        </div>
+        <div>
+          MANAGER:
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="manager{{ i }}"
+            (input)="changeRole('manager', user)"
+            *ngIf="user.role != 'manager'"
+          />
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="manager{{ i }}"
+            (input)="changeRole('manager', user)"
+            checked="true"
+            *ngIf="user.role == 'manager'"
+          />
+        </div>
+        <div>
+          ADMIN:
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="admin{{ i }}"
+            (input)="changeRole('admin', user)"
+            *ngIf="user.role != 'admin'"
+          />
+          <input
+            type="radio"
+            name="userRole{{ i }}"
+            id="admin{{ i }}"
+            (input)="changeRole('admin', user)"
+            checked="true"
+            *ngIf="user.role == 'admin'"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

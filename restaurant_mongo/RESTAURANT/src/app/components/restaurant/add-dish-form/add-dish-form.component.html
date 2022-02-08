@@ -1,0 +1,23 @@
+<div class="foreground">
+  <div class="formTitle">Dodaj Nowe Danie</div>
+  <form [formGroup]="modelForm" (ngSubmit)="addDishFormClick()">
+    <label>Name: <input type="text" formControlName="name" /></label>
+    <label
+      >Kitchen type: <input type="text" formControlName="kitchenType"
+    /></label>
+    <label>Category: <input type="text" formControlName="category" /></label>
+    <label>Products: <input type="text" formControlName="products" /></label>
+    <label
+      >Available: <input type="number" min="0" formControlName="available"
+    /></label>
+    <label
+      >Price USD:
+      <input type="number" min="0" step="0.01" formControlName="priceUSD"
+    /></label>
+    <label
+      >Description: <input type="text" formControlName="description"
+    /></label>
+    <label>Url: <input type="text" formControlName="url" /></label>
+    <button type="submit" [disabled]="!modelForm.valid">DODAJ</button>
+  </form>
+</div>

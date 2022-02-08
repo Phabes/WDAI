@@ -1,19 +1,23 @@
-<div id="container">
-  <div>
-    <app-car
-      [brands]="brands"
-      [models]="models"
-      [colors]="colors"
-      (brandChanged)="changeBrand($event)"
-      (modelChanged)="changeModel($event)"
-      (colorChanged)="changeColor($event)"
-    ></app-car>
+<div class="container-fluid">
+  <div style="color: blue">
+    <h3>{{ description }}</h3>
   </div>
-  <div id="carInfo">
-    <div *ngIf="allDataReceived; then customizedCar; else nothing"></div>
-    <ng-template #customizedCar>
-      {{ brands[currBrand] }} {{ models[currModel] }} {{ getColor() }}
-    </ng-template>
-    <ng-template #nothing>Choose your preferences</ng-template>
-  </div>
+
+  <nav>
+    <a
+      routerLink="students"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Student</a
+    >
+    <a
+      routerLink="add"
+      class="btn btn-primary active"
+      role="button"
+      routerLinkActive="active"
+      >Dodaj</a
+    >
+  </nav>
+  <router-outlet></router-outlet>
 </div>

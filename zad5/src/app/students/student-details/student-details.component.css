@@ -1,0 +1,16 @@
+#student {
+
+    border: 2px solid green;
+}
+
+.button {
+
+    padding: 5px;
+   margin-left: 5px;
+   margin-right: 5px;;
+
+}
+
+a{
+    text-decoration: none;
+}

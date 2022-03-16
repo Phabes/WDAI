@@ -1,0 +1,7 @@
+[{
+  "_id": {
+    "$oid": "61e54d93e4b0f279f3da1882"
+  },
+  "settingName": "persistence",
+  "value": "local"
+}]

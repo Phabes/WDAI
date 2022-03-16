@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "61e093180b2baf98490111d5"
+  },
+  "nick": "a",
+  "email": "a@a.a",
+  "password": "$2b$10$VLmvjp8kcEDpzgQfE8P.Y./Ki7wqQngONzzndXgTTYVKAsZuzOTC2",
+  "role": "admin",
+  "purchaseHistory": [],
+  "activeAccount": true,
+  "__v": 0,
+  "basket": []
+},{
+  "_id": {
+    "$oid": "61e093310b2baf98490111df"
+  },
+  "nick": "m",
+  "email": "m@m.m",
+  "password": "$2b$10$6xTtEk9FwRmeL/rQpI2qIOsTB4h5CyS6mhtHa3hHDWhKDeHs8L6WK",
+  "role": "manager",
+  "purchaseHistory": [],
+  "activeAccount": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e0936a0b2baf98490111e9"
+  },
+  "nick": "qwe",
+  "email": "qwe@qwe.qwe",
+  "password": "$2b$10$SEIi7VbTu.p8WGg6R1jlPeVYnN504ZEG9rXmmO0C2Aee2OzDdNm.y",
+  "role": "manager",
+  "purchaseHistory": [
+    {
+      "_id": "61e1da00a09124770181329c",
+      "name": "Pierogi z mięsem",
+      "quantity": 1,
+      "orderDate": 1642353738604
+    },
+    {
+      "_id": "61e1da00a0912477018132a0",
+      "name": "Pakora",
+      "quantity": 2,
+      "orderDate": 1642353738604
+    },
+    {
+      "_id": "61e1da00a0912477018132a1",
+      "name": "Ratatuj",
+      "quantity": 4,
+      "orderDate": 1642353738604
+    },
+    {
+      "_id": "61e1da00a09124770181329c",
+      "name": "Pierogi z mięsem",
+      "quantity": 2,
+      "orderDate": 1642353782244
+    }
+  ],
+  "activeAccount": true,
+  "__v": 0,
+  "basket": [
+    {
+      "dish": {
+        "_id": "61e1da00a09124770181329a",
+        "name": "Kurczak z ryżem",
+        "kitchenType": "Polska",
+        "category": "Mięsne",
+        "products": "Kurczak, Ryż, Pieczarki",
+        "available": 20,
+        "priceUSD": 5.99,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis sollicitudin lectus, ac lobortis felis. Duis leo nulla, convallis nec malesuada ac, tristique et ex. Sed nec odio et mauris semper tristique. Aliquam suscipit eleifend arcu. Etiam quis sodales orci. Cras auctor nec ligula ac hendrerit. Donec placerat hendrerit lorem, in tincidunt massa tristique a. In lectus nisl, mattis eu vestibulum ac, tristique nec eros.",
+        "url": [
+          "https://images.aws.nestle.recipes/resized/50c8c84a669bf98e2c696ad1d142c255_kurczak_faszerowany_ryżem__19_944_531.jpg",
+          "https://ocdn.eu/images/pulscms/YjI7MDA_/5097b9004a8bd787abae786c2103c3cc.jpg",
+          "https://akademiasmaku.pl/upload/recipes/4716/danie-jednogarnkowe-kurczak-z-ryzem-4716.jpg"
+        ],
+        "avgStars": 5,
+        "rates": [],
+        "comments": []
+      },
+      "quantity": 1
+    },
+    {
+      "dish": {
+        "_id": "61e1da00a09124770181329c",
+        "name": "Pierogi z mięsem",
+        "kitchenType": "Polska",
+        "category": "Danie Główne",
+        "products": "Mięso wołowe, 1/4 cebuli, 500g mąki",
+        "available": 2,
+        "priceUSD": 2.99,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis sollicitudin lectus, ac lobortis felis. Duis leo nulla, convallis nec malesuada ac, tristique et ex. Sed nec odio et mauris semper tristique. Aliquam suscipit eleifend arcu. Etiam quis sodales orci. Cras auctor nec ligula ac hendrerit. Donec placerat hendrerit lorem, in tincidunt massa tristique a. In lectus nisl, mattis eu vestibulum ac, tristique nec eros.",
+        "url": [
+          "https://kuchnia-marty.pl/wp-content/uploads/2014/09/pierogi9.jpg",
+          "https://ocdn.eu/pulscms-transforms/1/OkPk9kpTURBXy84OTA5ODQ2N2NkYzI0YTcyMzdhNDdlY2JkNzI2ZDZiNC5qcGeTlQMAzQF7zRXwzQxZkwXNAxTNAbyTCaYyODJlYWIGgaEwAQ/pierogi-z-miesem.jpg"
+        ],
+        "avgStars": 5,
+        "rates": [],
+        "comments": []
+      },
+      "quantity": 1
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61e20e4b24988b36c4bd6757"
+  },
+  "nick": "w",
+  "email": "w@w.w",
+  "password": "$2b$10$GQ0JNDXkFSLsl73QtE98sujrD6ALDH8wgYqpT6YlWhpeWkTO5pPzG",
+  "role": "client",
+  "purchaseHistory": [],
+  "activeAccount": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61e2bd19ae56c264b6d7fd21"
+  },
+  "nick": "n",
+  "email": "n@n.n",
+  "password": "$2b$10$JBfn9QknPw0xa.VojnWqDuCQpCDmFkNGQBe9C2BKUp3l2Vp0vhcSq",
+  "role": "client",
+  "purchaseHistory": [],
+  "activeAccount": true,
+  "__v": 0
+}]

@@ -1,0 +1,56 @@
+<div id="filters">
+  <div id="filtersName">Filtry:</div>
+  <div class="filter">
+    Wybierz swoje typy kuchnii:
+    <div *ngFor="let type of kitchenTypes">
+      <input
+        type="checkbox"
+        name="{{ type }}"
+        checked="true"
+        (change)="typeChange($event)"
+      />{{ type }}
+    </div>
+  </div>
+  <div class="filter">
+    Wybierz swoje kategorie:
+    <div *ngFor="let category of categories">
+      <input
+        type="checkbox"
+        name="{{ category }}"
+        checked="true"
+        (change)="categoryChange($event)"
+      />{{ category }}
+    </div>
+  </div>
+  <div class="filter">
+    Wybierz minimalną liczbę gwiazdek:
+    <select name="minStars" id="minStars" (change)="starChange($event)">
+      <option *ngFor="let index of stars" value="{{ index }}">
+        {{ index }}
+      </option>
+    </select>
+  </div>
+  <div class="filter">
+    Wybierz zakres cenowy w {{ currency }}:
+    <div>
+      <div id="priceFilter">
+        <input
+          type="text"
+          name="mini"
+          id="mini"
+          placeholder="{{ miniPrice }}"
+          (input)="miniChange($event)"
+        />
+        -
+        <input
+          type="text"
+          name="maxi"
+          id="maxi"
+          placeholder="{{ maxiPrice }}"
+          (input)="maxiChange($event)"
+        />
+      </div>
+    </div>
+  </div>
+  <button id="filterButton" (click)="filter()">Filtuj</button>
+</div>

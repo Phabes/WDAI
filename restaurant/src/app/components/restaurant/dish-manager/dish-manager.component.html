@@ -1,0 +1,20 @@
+<div id="dishesEditor">
+  <app-add-dish-form></app-add-dish-form>
+  <div id="editDishes">
+    <div id="dishList">
+      <div class="dishInfo" *ngFor="let dish of dishes">
+        <div class="dishName">{{ dish.name }}</div>
+        <div class="dishButtons">
+          <div class="managerButton" (click)="editDish(dish)">EDIT</div>
+          <div class="managerButton" (click)="deleteDish(dish)">DELETE</div>
+        </div>
+      </div>
+    </div>
+    <div id="editFormContainer">
+      <app-edit-dish-form
+        *ngIf="edit != null"
+        [dish]="edit"
+      ></app-edit-dish-form>
+    </div>
+  </div>
+</div>

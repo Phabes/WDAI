@@ -1,0 +1,66 @@
+#dishesEditor {
+  min-height: calc(100vh - 170px);
+}
+
+#editDishes {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#dishList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dishInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dishName {
+  padding: 10px;
+  width: 60%;
+}
+
+.dishButtons {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.managerButton {
+  margin: 5px;
+  padding: 10px;
+  width: 50%;
+  min-width: 60px;
+  background-color: rgb(90, 185, 76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.managerButton:hover {
+  background-color: rgb(61, 136, 49);
+}
+
+#editFormContainer {
+  width: 60%;
+}
+
+@media (max-width: 1200px) {
+  #editDishes {
+    flex-direction: column;
+  }
+
+  #editFormContainer {
+    width: 100%;
+  }
+}

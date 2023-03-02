@@ -1,0 +1,29 @@
+<div class="container">
+  <div id="basketDishes" *ngIf="basket.length != 0">
+    Basket:
+    <div class="singleDish" *ngFor="let basketDish of basket">
+      <div class="dishName">{{ basketDish.dish.name }}</div>
+      <div class="cartButtons">
+        <div class="dishQuantity">x {{ basketDish.quantity }}</div>
+        <div class="cartButton addCartButton" (click)="addButtonClick(basketDish)">
+          +
+        </div>
+        <div class="cartButton removeCartButton" (click)="removeButtonClick(basketDish)">
+          -
+        </div>
+      </div>
+    </div>
+    <div id="purchase" (click)="placeAnOrder()">Purchase</div>
+  </div>
+  <div id="history" *ngIf="history.length != 0">
+    History:
+    <div class="singleDish" *ngFor="let historyObject of history">
+      <div class="dishName">{{ historyObject.name }}</div>
+      <div class="cartButtons">
+        <div class="dishQuantity">x {{ historyObject.quantity }}</div>
+        <div>{{ historyObject.orderDate }}</div>
+      </div>
+    </div>
+  </div>
+  <div id="empty" *ngIf="basket.length == 0 && history.length == 0">Nie masz nic w koszyku</div>
+</div>

@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  font-size: 30px;
+}
+
+#empty {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#basketDishes {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.singleDish {
+  display: flex;
+  position: relative;
+  background-color: rgb(164, 164, 165);
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+}
+
+.dishQuantity {
+  margin-right: 10px;
+}
+
+.cartButtons {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.cartButton {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.5s;
+}
+
+
+.addCartButton {
+  height: 30px;
+  background-color: rgb(237, 98, 74);
+}
+
+.addCartButton:hover {
+  background-color: rgb(207, 58, 32);
+}
+
+.removeCartButton {
+  padding-bottom: 5px;
+  background-color: rgb(89, 127, 233);
+}
+
+.removeCartButton:hover {
+  background-color: rgb(41, 86, 210);
+}
+
+#purchase {
+  width: 200px;
+  border: 1px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(245, 176, 127);
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+#purchase:hover {
+  background-color: rgb(236, 141, 73);
+}
+
+#history {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}

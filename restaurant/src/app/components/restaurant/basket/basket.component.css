@@ -1,0 +1,55 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#basket {
+  height: 70%;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navIcon {
+  position: relative;
+  height: 70%;
+}
+
+.navIcon > img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+#basket:hover {
+  background-color: rgb(109, 192, 36);
+}
+
+.navIconDesc {
+  height: 20%;
+}
+
+.totalInBasket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(233, 102, 102);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hideTotalInBasket {
+  display: none;
+  font-size: 30px;
+}
+
+.changeTotalInBusketColor {
+  background-color: rgb(36, 168, 185);
+}

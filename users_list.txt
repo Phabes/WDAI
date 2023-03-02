@@ -1,8 +1,11 @@
-FORMAT:
-ROLA - EMAIL - HASŁO
+admin@admin.admin
+adminek
 
-ADMIN - a@a.a - a
-MANAGER - m@m.m - m
-CLIENT - qwe@qwe.qwe - qwe
-CLIENT - w@w.w - w
-CLIENT - n@n.n - n
+www@www.www
+qweqwe
+
+qwe@qwe.qwe
+qweqwe
+
+zxc@zxc.zxc
+zxczxc
